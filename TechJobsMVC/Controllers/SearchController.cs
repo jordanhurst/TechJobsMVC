@@ -30,6 +30,7 @@ namespace TechJobsMVC.Controllers
             {
                 jobs = JobData.FindByColumnAndValue(searchType, searchTerm);
             }
+            ViewBag.searchType = searchType;
             ViewBag.columns = ListController.ColumnChoices;
             ViewBag.jobs = jobs;
             return View("index");
